@@ -8,27 +8,41 @@ import Experience from './Experience'
 import Projects from './Projects'
 import Interests from './Interests'
 import My_Interests from '../Interests'
+import { TypewriterEffect } from "./ui/typewriter-efect";
+import { WavyBackground } from "./ui/wavy-background";
+import {TextGenerateEffect} from './ui/text-generate-effect'
+import Marquee from "react-fast-marquee";
+
 
 const Home = () => {
+    const words = [
+        {
+          text: "Raghav",
+        },
+        {
+          text: "Khanna",
+        },
+      ];
+      const wds = `Passionate and driven Javascript developer with ~2 years of hands-on experience, actively seeking opportunities to apply and enhance my expertise.
+      Holding a BCA degree, I am dedicated to continuous learning and skill refinement. A collaborative team player, I bring optimism, confidence, and a strong commitment to achieving shared goals.
+`;
     return (
         <>
         
             <br />
+
             <div className="flex flex-col md:flex-row items-center justify-center py-4">
                 <div className="p-6 md:w-1/2 bg-white rounded shadow-lg">
-                    <h2 className="text-center text-4xl font-semibold text-blue-600 my-3 hover:scale-105 hover:cursor-pointer" style={{ fontFamily: 'cursive' }}>
-                        <mark className="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">Raghav Khanna</mark>
-                    </h2>
-                    <p className="mt-4 text-gray-700 text-center">
-                        Passionate and driven Javascript developer with ~2 years of hands-on experience, actively seeking opportunities to apply and enhance my expertise.
-                        Holding a BCA degree, I am dedicated to continuous learning and skill refinement. A collaborative team player, I bring optimism, confidence, and a strong commitment to achieving shared goals.
-                    </p>
+                <h2 className="text-center text-4xl font-semibold text-black sm:text-white my-3 hover:scale-105 hover:cursor-pointer" style={{ fontFamily: 'cursive' }}>
+    <TypewriterEffect className="px-2 py-3 text-white bg-blue-600 rounded dark:bg-blue-500" words={words} />
+</h2>
+
+                     <TextGenerateEffect className="mt-4 text-gray-700 text-center" words={wds}/>
                     <div className="mt-6 flex items-center justify-center">
                         <img src='icons/mail.svg' className="h-6 w-6 mr-2 text-blue-600" />
 
                         <p className="text-blue-600 cursor-pointer">Mail: raghavkhanna0011@email.com</p>
                     </div>
-                    {/* DOB Section */}
                     <div className="mt-4 flex items-center justify-center">
                         <img src='icons/dob.svg' className="h-6 w-6 mr-2 text-blue-600" />
 
@@ -46,7 +60,7 @@ const Home = () => {
                 <img 
                     src="images/Img1.jpg" 
                     alt="Round Image" 
-                    className="rounded w-80 h-80 object-cover shadow-lg " 
+                    className="rounded w-80 h-80 object-cover shadow-lg border border-2 border-white" 
                 />
                 </div>
 
@@ -113,9 +127,12 @@ const Home = () => {
                 ))}
 
             </div>
+                <br/>
            <div className='bg-blue-400 text-white px-2 py-2 text-center text-2xl'>
-           ~ If you can see the invisible then you can achieve the impossible ~
+           <Marquee pauseOnHover="true">
 
+           ~ If you can see the invisible then you can achieve the impossible ~
+            </Marquee >
            </div>
            <p className='bg-blue-400'>
             &nbsp;

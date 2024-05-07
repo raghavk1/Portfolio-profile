@@ -12,7 +12,7 @@ const ContactUs = () => {
           <div className="container mx-auto py-12 px-4 text-center">
             <h1 className="text-3xl font-bold mb-6"></h1>
             <p className="text-lg mb-4">
-              I'd love to hear from you! Whether you have a question about our services, need assistance with your account, or just want to say hello, feel free to reach out to me.
+              I'd love to hear from you! Whether you have a question about my services/work, or just want to say hello, feel free to reach out to me.
             </p>
             <h2 className='font-bold mb-2 text-lg text-blue-600'> Developer: Raghav Khanna</h2>
 <h4 className='font-bold mb-2 text-sm text-gray-600'>Designation: Software Developer</h4>

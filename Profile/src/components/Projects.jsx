@@ -9,15 +9,15 @@ const Projects = ({ project }) => {
     return (
         <>
             <CardContainer className="max-w-sm">
-                <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                <CardBody className="bg-black relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] min-h-[300px] h-auto rounded-xl p-6 border  ">
                     <CardItem
                         translateZ="50"
                         className="text-xl font-bold text-neutral-600 dark:text-white"
                     >
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.name}</h5>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300 dark:text-white">{project.name}</h5>
 
                     </CardItem>
-                    <CardItem translateZ="100" className="w-full mt-4">
+                    {/* <CardItem translateZ="100" className="w-full mt-4"> */}
                         <Carousel>
                             {project.image.map((image, index) => (
                                 <div key={index} className="rounded-t-lg flex justify-center items-center min-h-[200px] scroll-snap-start">
@@ -25,7 +25,7 @@ const Projects = ({ project }) => {
                                 </div>
                             ))}
                         </Carousel>
-                    </CardItem>
+                    {/* </CardItem> */}
                     <div className="flex justify-between items-center mt-20">
                         <CardItem
                             translateZ={20}
@@ -34,7 +34,7 @@ const Projects = ({ project }) => {
                             target="__blank"
                             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                         >
-                            <p className="mb-3 font-normal text-white"> Technologies: {project.technologies}</p>
+                            <p className="mb-3 font-normal text-xl text-gray-400"> Technologies: {project.technologies}</p>
 
                         </CardItem>
                         <CardItem
